@@ -14,6 +14,7 @@ canvas.dots
   left: 0;
   width: 100%;
   height: 100%;
+  z-index -1
 
 // random()
 //   return math(math(0, 'random') * 100 + 1, 'floor')
@@ -137,3 +138,161 @@ $keyframe-name = pulse
 //     transform: translateY(random(1*1vh, 100*1vh))
 //   100%
 //     transform: translateY(random(1*1vh, 100*1vh))
+
+.blue, .green
+  width: 7rem;
+  height: 7rem;
+  margin: .5rem;
+  will-change: scale
+
+.blue
+  background-color: blue
+.green
+  background-color: green
+
+.social, #hide
+  position: relative
+  background-color: #fff
+  z-index 9999
+  color #222
+  cursor: pointer
+  width: 60px
+  height: 60px
+  line-height 60px
+  text-align center
+  float left
+  div
+    width: 60px
+    height: 60px
+    line-height 60px
+    color #fff
+    position absolute
+    // transform: translateY(-60px)
+    // scale .5
+    &:nth-child(1)
+      background-color: #747
+    &:nth-child(2)
+      background-color: #124
+    &:nth-child(3)
+      background-color: #754
+
+#outside
+  z-index: 2
+  position: relative
+  background-color: #fff
+  z-index 9999
+  color #222
+  cursor: pointer
+  width: 60px
+  height: 60px
+  line-height 60px
+  text-align center
+  float left
+
+#hide
+  background-color: red
+  color: #fff
+  display: inline-block
+  cursor: pointer
+  z-index 9999
+
+// card animation -------------------------------------------------------------
+.tilter
+  position: relative;
+  display: block;
+  flex: none;
+  width: 100vw;
+  height: auto
+  margin: 1.5em 2.5em;
+  color: #fff;
+  perspective: 1000px
+  margin 0 auto
+  *
+    pointer-events none
+  &:focus, &:hover
+    color: #fff
+    outline none
+
+
+
+.tilter__figure,
+.tilter__image
+  display: block
+  width: 100%
+  height: 100%
+  margin: 0
+
+.smooth .tilter__figure,
+.smooth .tilter__deco--overlay,
+.smooth .tilter__deco--lines,
+.smooth .tilter__deco--shine div,
+.smooth .tilter__caption {
+  transition: transform 0.2s ease-out;
+}
+.tilter__figure
+  position relative
+  &:before
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 30px 20px rgba(35,32,39,0.5);
+  > *
+    transform: translateZ(0px)
+
+.tilter__deco
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+
+
+.tilter__deco--overlay {
+  background-image: linear-gradient(45deg, rgba(56, 4, 234, 0.4), rgba(145, 58, 252, 0.2), rgba(1, 0, 13, 0.59));
+
+}
+
+.tilter__deco--shine div {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+}
+
+.tilter__deco--lines {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+.tilter__caption
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4em;
+
+.tilter__title {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+
+.tilter__description {
+  font-size: 0.85em;
+  margin: 1em 0 0 0;
+  letter-spacing: 0.15em;
+}
+
+
+#smile
+  width 40vw
+  position absolute
+  top 0

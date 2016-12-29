@@ -8,8 +8,8 @@ html(lang='ru')
     meta(charset='UTF-8')
     title Webpack Jade!
   body
-    .container
-      +header
+    .containers
+      //- +header
       //- #myCarousel.carousel.slide(data-ride='carousel')
       //-   ol.carousel-indicators
       //-     li(data-target='#myCarousel', data-slide-to='0')
@@ -49,9 +49,48 @@ html(lang='ru')
       //-       | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
       //-   .col-md-5.col-md-pull-7
       //-     img.featurette-image.img-responsive.center-block(data-src='holder.js/500x500/auto', alt='500x500', src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1ODkxNTA1NTU5IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU4OTE1MDU1NTkiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg0Ljg5ODQzNzUiIHk9IjI2MS4xIj41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+', data-holder-rendered='true')
-      .treeChristmas
-        .tree
-      #earth.earth
+      //- .treeChristmas
+      //-   .tree
+      //- .smooth
+
+
+      //-   a.tilter.tilter--2(href='#')
+      //-     figure.tilter__figure
+      //-       img.tilter__image(src='styles/img1.jpg', alt='img03')
+      //-       .tilter__deco.tilter__deco--shine
+      //-         div
+      //-       .tilter__deco.tilter__deco--overlay
+      //-       figcaption.tilter__caption
+      //-         h3.tilter__title Helen Portland
+      //-         p.tilter__description Seattle
+      //-       svg.tilter__deco.tilter__deco--lines(viewbox='0 0 300 415')
+      //-         path(d='M20.5,20.5h260v375h-260V20.5z')
+      .smooth
+        a.tilter.tilter--2(href='#')
+          figure.tilter__figure
+              img.tilter__image(src='styles/earth.jpg', alt='img03')
+              .tilter__deco.tilter__deco--shine
+                div
+              .tilter__deco.tilter__deco--overlay
+              figcaption.tilter__caption
+                h3.tilter__title The Earth
+                p.tilter__description Best planet
+        .pater
+
+
+
+
+
+      .blue
+      .green
+      .socu
+        #outside S
+        .social
+          .fb FB
+          .vk VK
+          .tw TW
+        #hide hide
+      //- #earth.earth
         - for(var i = 1; i < 100; i++)
           .snow
             svg#Capa_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', width='512px', height='512px', viewbox='0 0 35.545 35.545', xml:space='preserve')
